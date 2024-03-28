@@ -8,7 +8,9 @@ function LoginForm() {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+
     console.log({ email, password });
+    
     // Reset form fields
     setEmail('');
     setPassword('');
