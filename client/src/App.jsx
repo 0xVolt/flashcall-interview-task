@@ -6,11 +6,13 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import RegisterForm from './Register'
 import LoginForm from './Login'
 
+
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
+          {/* <Route path='/' element={ <RegisterForm /> }></Route> */}
           <Route path='/register' element={ <RegisterForm /> }></Route>
           <Route path='/login' element={ <LoginForm /> }></Route>
         </Routes>
