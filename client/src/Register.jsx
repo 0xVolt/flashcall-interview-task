@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 
 function RegisterForm() {
@@ -7,14 +8,20 @@ function RegisterForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const navigate = useNavigate()
+
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
     console.log({ name, email, password });
 
-    axios.post('', { name, email, password })
-    .then(result => console.log(result))
+    axios.post('http://localhost:3001/register', { name, email, password })
+    .then(result => {
+      console.log(result)
+      // Go back to the login page after registering
+      navigate('/login')
+    })
     .catch(err => console.log(err))
     
     // Reset form fields
