@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
 function Home() {
-  // Define the color options from the palette
+  // Define the color options from the palettes
   const colorOptions = [
-    { name: 'Blue', value: '#1B6284' },
-    { name: 'Gray', value: '#404C5C' },
-    { name: 'Slate', value: '#546682' },
-    { name: 'Tan', value: '#B88683' },
-    { name: 'Orange', value: '#DE6845' },
+    { name: 'Blue', value: '#1B6284', contrastColor: '#fff' },
+    { name: 'Gray', value: '#404C5C', contrastColor: '#fff' },
+    { name: 'Indigo', value: '#546682', contrastColor: '#fff' },
+    { name: 'Tan', value: '#B88683', contrastColor: '#fff' },
+    { name: 'Orange', value: '#DE6845', contrastColor: '#fff' },
+    { name: 'Brick Red', value: '#A83441', contrastColor: '#fff' },
+    { name: 'Taupe', value: '#564D49', contrastColor: '#fff' },
+    { name: 'Light Brown', value: '#CFC3B0', contrastColor: '#000' },
+    { name: 'Slate Gray', value: '#9D9783', contrastColor: '#000' },
+    { name: 'Dark Khaki', value: '#9F864F', contrastColor: '#000' },
   ];
 
   // State to manage the selected color
@@ -19,24 +24,28 @@ function Home() {
     localStorage.setItem('selectedColor', colorValue);
   };
 
-  // Effect to apply color on initial render
+  // Effect to apply color and text contrast on initial render
   useEffect(() => {
     document.body.style.backgroundColor = selectedColor;
+
+    // Determine contrast color based on background color
+    const selectedOption = colorOptions.find(option => option.value === selectedColor);
+    document.body.style.color = selectedOption.contrastColor;
   }, [selectedColor]);
 
   return (
     <div className="container">
-      <h1 className="mt-4 mb-4">Welcome to My App</h1>
+      <h1 className="mt-4 mb-4">Here's the Home Page</h1>
 
       <div className="mb-3">
-        <h3>Select Background Color:</h3>
-        <div className="btn-group" role="group" aria-label="Color Buttons">
+        <h4>Select a colour you like:</h4>
+        <div className="color-grid">
           {colorOptions.map((color, index) => (
             <button
               key={index}
               type="button"
-              className="btn"
-              style={{ backgroundColor: color.value, color: '#fff' }}
+              className="btn btn-outline-secondary color-button"
+              style={{ backgroundColor: color.value, color: color.contrastColor }}
               onClick={() => handleColorChange(color.value)}
             >
               {color.name}
