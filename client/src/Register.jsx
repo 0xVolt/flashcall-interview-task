@@ -7,7 +7,7 @@ function RegisterForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const [color, setColor] = useState('');
   const navigate = useNavigate()
 
   // Handle form submission
@@ -16,7 +16,9 @@ function RegisterForm() {
 
     console.log({ name, email, password });
 
-    axios.post('http://localhost:3001/register', { name, email, password })
+    const defaultColor = 'Blue'
+
+    axios.post('http://localhost:3001/register', { name, email, password, defaultColor })
     .then(result => {
       console.log(result)
       // Go back to the login page after registering
@@ -28,6 +30,7 @@ function RegisterForm() {
     setName('');
     setEmail('');
     setPassword('');
+    setColor('');
   };
 
   return (

@@ -56,10 +56,10 @@ function Home() {
 
       <div className="card p-4">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend, ligula ac dapibus placerat, tellus massa dapibus lectus, non luctus sapien nisi nec justo.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula libero ut metus pulvinar, nec tempus nulla pharetra. In hac habitasse platea dictumst. Ut in lobortis eros, ut condimentum enim. Mauris lobortis, dui quis tempor ultricies, lorem lectus aliquam tellus, sit amet gravida libero dui vel leo. Nulla facilisi. Ut varius consequat eros, in fermentum tortor malesuada eu.
         </p>
         <p>
-          Etiam convallis nulla nec turpis efficitur, quis egestas ex efficitur. Proin ac libero ut elit rhoncus posuere.
+          Fusce sed augue tincidunt, vehicula mi a, fermentum dui. Maecenas feugiat consequat quam. Nullam sed justo ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam pretium fermentum arcu, at scelerisque elit lacinia eu. Etiam sit amet diam nec libero cursus suscipit. Maecenas vitae urna et mi gravida interdum quis vel ex.
         </p>
       </div>
     </div>
