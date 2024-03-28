@@ -33,7 +33,7 @@ function RegisterForm() {
   return (
     <div className="container mt-4">
       <div className="card p-4 rounded">
-        <h2 className="mb-4 text-center">Register</h2>
+        <h2 className="mb-4">Register</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="name" className="form-label">Name:</label>
