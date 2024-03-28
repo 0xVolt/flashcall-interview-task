@@ -39,6 +39,6 @@ app.post('/register', (request, response) => {
     .catch(err => response.json(err))
 })
 
-app.listen(3001, () => {
+app.listen(process.env.PORT || 3001, () => {
     console.log('Server is running. Listening on port number 3001...')
 })
