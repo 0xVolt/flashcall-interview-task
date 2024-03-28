@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios'
 
 function RegisterForm() {
   // State variables to store form data
@@ -9,8 +10,13 @@ function RegisterForm() {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can perform form validation or submit data to backend here
+
     console.log({ name, email, password });
+
+    axios.post('', { name, email, password })
+    .then(result => console.log(result))
+    .catch(err => console.log(err))
+    
     // Reset form fields
     setName('');
     setEmail('');
@@ -72,4 +78,4 @@ function RegisterForm() {
   );
 }
 
-export default SignupForm;
+export default RegisterForm;
