@@ -8,6 +8,10 @@ Create a sign-in page for users and save user details and preferences in a mongo
 
 This project uses React for the frontend with bootstrap to style pages. The server in the backend is handled by an Express app running on Node.js.
 
+## Note:
+
+#### Please make sure you're on the `old-state` branch to run the stable version.
+
 ## Steps to Run
 
 1. Clone this repository with `git clone <link>`
