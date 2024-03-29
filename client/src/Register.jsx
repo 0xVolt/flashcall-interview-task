@@ -18,7 +18,7 @@ function RegisterForm() {
 
     const defaultColor = 'Blue'
 
-    axios.post('http://localhost:3001/register', { name, email, password, defaultColor })
+    axios.post('https://flashcall-interview-task-api.vercel.app/register', { name, email, password, defaultColor })
     .then(result => {
       console.log(result)
       // Go back to the login page after registering
