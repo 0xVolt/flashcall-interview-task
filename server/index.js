@@ -11,7 +11,7 @@ app.use(express.json())
 
 // Use this to allow cross-origin
 app.use(cors({
-    origin: [''],
+    origin: ['https://flashcall-interview-task-api.vercel.app/'],
     methods: ['GET', 'POST'],
     credentials: true
   }
