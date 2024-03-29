@@ -15,6 +15,8 @@ function LoginForm() {
 
     console.log({ email, password });
     
+    axios.defaults.withCredentials = true
+
     axios.post('https://flashcall-interview-task-api.vercel.app/login', { email, password })
     .then(result => {
       console.log(result)
