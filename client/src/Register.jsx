@@ -20,7 +20,7 @@ function RegisterForm() {
 
     axios.defaults.withCredentials = true
 
-    axios.post('https://flashcall-interview-task-api.vercel.app/register', { name, email, password, defaultColor })
+    axios.post('http://127.0.0.1:5174/register', { name, email, password, defaultColor })
     .then(result => {
       console.log(result)
       // Go back to the login page after registering

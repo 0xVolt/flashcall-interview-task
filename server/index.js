@@ -11,15 +11,15 @@ app.use(express.json())
 
 // Use this to allow cross-origin
 app.use(cors({
-    origin: ['https://flashcall-interview-task-api.vercel.app/'],
+    origin: ['http://127.0.0.1:5174/'],
     methods: ['GET', 'POST'],
     credentials: true
   }
 ))
 
 // Create MongoDB connection to the user database
-// mongoose.connect('mongodb://127.0.0.1:27017/user')
-mongoose.connect('mongodb+srv://deshiyer:CcqajXuZmHXZY1Jv@cluster0.xixrtt2.mongodb.net/users?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect('mongodb://127.0.0.1:27017/user')
+// mongoose.connect('mongodb+srv://deshiyer:CcqajXuZmHXZY1Jv@cluster0.xixrtt2.mongodb.net/users?retryWrites=true&w=majority&appName=Cluster0')
 
 app.post('/', (request, response) => {
   response.json("Hello!")
