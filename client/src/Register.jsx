@@ -25,7 +25,7 @@ function RegisterForm() {
       navigate('/login')
     })
     .catch(err => console.log(err))
-    
+
     // Reset form fields
     setName('');
     setEmail('');
