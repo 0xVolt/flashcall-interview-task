@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom' 
+import { useNavigate } from 'react-router-dom'
 
 function LoginForm() {
   // State variables to store form data
@@ -14,14 +14,14 @@ function LoginForm() {
     e.preventDefault();
 
     console.log({ email, password });
-    
+
     axios.post('http://localhost:3001/login', { email, password })
     .then(result => {
       console.log(result)
 
       if (result.data === 'Success! Logged in.') {
         navigate('/home')
-      }  
+      }
     })
     .catch(err => console.log(err))
 
